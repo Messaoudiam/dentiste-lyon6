@@ -16,8 +16,8 @@ const contactInfo = [
   {
     icon: 'phone',
     title: 'Téléphone',
-    value: '04 78 XX XX XX',
-    href: 'tel:+33478XXXXXX',
+    value: '04 78 12 34 56',
+    href: 'tel:+33478123456',
   },
   {
     icon: 'email',
@@ -208,10 +208,13 @@ export default function Contact() {
           <SectionReveal direction="right" delay={0.2} className="lg:col-span-7">
             <div className="bg-white rounded-2xl p-5 sm:p-8 lg:p-10 shadow-lg border border-gray-light/50">
               <h3 className="text-2xl font-semibold text-foreground mb-2">
-                Envoyez-nous un message
+                Demande de rendez-vous
               </h3>
-              <p className="text-gray mb-8">
-                Nous vous répondrons dans les plus brefs délais.
+              <p className="text-gray mb-2">
+                Je vous recontacterai sous 24h pour confirmer le créneau.
+              </p>
+              <p className="text-xs text-gray/70 mb-8 italic">
+                Ce formulaire est exclusivement dédié à la prise de rendez-vous.
               </p>
 
               <form className="space-y-6">
@@ -252,10 +255,11 @@ export default function Contact() {
                   />
                   <div>
                     <label className="text-sm font-medium text-foreground mb-2 block">
-                      Sujet
+                      Motif de consultation <span className="text-accent">*</span>
                     </label>
                     <select
                       name="subject"
+                      required
                       className={cn(
                         'w-full bg-gray-light/30 border border-transparent rounded-xl px-4 py-3.5',
                         'text-foreground',
@@ -270,10 +274,13 @@ export default function Contact() {
                         backgroundSize: '1.5em 1.5em',
                       }}
                     >
-                      <option value="rdv">Prise de rendez-vous</option>
-                      <option value="info">Renseignements</option>
+                      <option value="">Sélectionnez le motif</option>
+                      <option value="consultation">Consultation générale</option>
+                      <option value="soins">Soins conservateurs</option>
+                      <option value="implant">Implantologie</option>
+                      <option value="esthetique">Esthétique dentaire</option>
+                      <option value="orthodontie">Orthodontie</option>
                       <option value="urgence">Urgence dentaire</option>
-                      <option value="autre">Autre demande</option>
                     </select>
                   </div>
                 </div>
@@ -281,13 +288,12 @@ export default function Contact() {
                 {/* Message */}
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
-                    Message <span className="text-accent">*</span>
+                    Informations complémentaires
                   </label>
                   <textarea
                     name="message"
-                    required
-                    rows={5}
-                    placeholder="Décrivez votre demande..."
+                    rows={4}
+                    placeholder="Précisez vos disponibilités préférées ou toute information utile pour votre rendez-vous..."
                     className={cn(
                       'w-full bg-gray-light/30 border border-transparent rounded-xl px-4 py-3.5',
                       'text-foreground placeholder:text-gray/50',
@@ -298,6 +304,15 @@ export default function Contact() {
                     onBlur={() => setFocusedField(null)}
                   />
                 </div>
+
+                {/* RGPD Notice */}
+                <p className="text-xs text-gray leading-relaxed">
+                  En soumettant ce formulaire, vous acceptez que vos données soient utilisées
+                  pour vous recontacter dans le cadre de votre demande de rendez-vous.{' '}
+                  <a href="/confidentialite" className="text-accent hover:underline">
+                    Politique de confidentialité
+                  </a>
+                </p>
 
                 {/* Submit */}
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-4">
@@ -314,7 +329,7 @@ export default function Contact() {
                       'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2'
                     )}
                   >
-                    Envoyer le message
+                    Demander un rendez-vous
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                     </svg>

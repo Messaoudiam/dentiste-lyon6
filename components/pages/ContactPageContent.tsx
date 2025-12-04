@@ -18,9 +18,9 @@ const contactInfo = [
   {
     icon: 'phone',
     title: 'Téléphone',
-    content: '04 78 XX XX XX',
+    content: '04 78 12 34 56',
     subcontent: 'Lun-Ven : 9h-19h',
-    href: 'tel:+33478XXXXXX',
+    href: 'tel:+33478123456',
   },
   {
     icon: 'email',
@@ -139,8 +139,8 @@ export default function ContactPageContent() {
               Prenez rendez-vous
             </h1>
             <p className="text-lg lg:text-xl text-gray max-w-2xl">
-              Nous sommes à votre écoute. Contactez-nous par téléphone, email
-              ou via le formulaire ci-dessous pour prendre rendez-vous.
+              Je suis à votre écoute. Contactez-moi par téléphone, email
+              ou via le formulaire ci-dessous pour prendre rendez-vous au cabinet.
             </p>
           </motion.div>
         </div>
@@ -172,10 +172,14 @@ export default function ContactPageContent() {
                     >
                       <div className="mb-8">
                         <h2 className="text-2xl font-semibold text-foreground mb-2">
-                          Envoyez-nous un message
+                          Demande de rendez-vous
                         </h2>
                         <p className="text-gray text-sm">
-                          Remplissez le formulaire et nous vous répondrons sous 24h.
+                          Remplissez le formulaire ci-dessous pour demander un rendez-vous.
+                          Je vous recontacterai sous 24h pour confirmer le créneau.
+                        </p>
+                        <p className="text-xs text-gray/70 mt-2 italic">
+                          Ce formulaire est exclusivement dédié à la prise de rendez-vous.
                         </p>
                       </div>
 
@@ -206,12 +210,13 @@ export default function ContactPageContent() {
                       {/* Service Select */}
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-2">
-                          Type de soin
+                          Motif de consultation <span className="text-accent">*</span>
                         </label>
                         <select
                           name="service"
                           value={formData.service}
                           onChange={handleInputChange}
+                          required
                           className={cn(
                             'w-full px-4 py-3 rounded-xl',
                             'bg-gray-light/30 border border-transparent',
@@ -227,7 +232,7 @@ export default function ContactPageContent() {
                             backgroundSize: '1.25rem',
                           }}
                         >
-                          <option value="">Sélectionnez un service</option>
+                          <option value="">Sélectionnez le motif du rendez-vous</option>
                           {serviceOptions.map((option) => (
                             <option key={option} value={option}>
                               {option}
@@ -239,14 +244,14 @@ export default function ContactPageContent() {
                       {/* Message Textarea */}
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-2">
-                          Votre message
+                          Informations complémentaires
                         </label>
                         <textarea
                           name="message"
                           value={formData.message}
                           onChange={handleInputChange}
-                          rows={5}
-                          placeholder="Décrivez votre demande..."
+                          rows={4}
+                          placeholder="Précisez vos disponibilités préférées ou toute information utile pour votre rendez-vous..."
                           className={cn(
                             'w-full px-4 py-3 rounded-xl resize-none',
                             'bg-gray-light/30 border border-transparent',
@@ -268,6 +273,17 @@ export default function ContactPageContent() {
                         </motion.p>
                       )}
 
+                      {/* RGPD Notice */}
+                      <p className="text-xs text-gray leading-relaxed">
+                        En soumettant ce formulaire, vous acceptez que vos données soient
+                        utilisées pour vous recontacter dans le cadre de votre demande de
+                        rendez-vous. Conformément au RGPD, vous disposez d&apos;un droit
+                        d&apos;accès, de rectification et de suppression de vos données.{' '}
+                        <a href="/confidentialite" className="text-accent hover:underline">
+                          En savoir plus
+                        </a>
+                      </p>
+
                       {/* Submit Button */}
                       <button
                         type="submit"
@@ -288,7 +304,7 @@ export default function ContactPageContent() {
                           </>
                         ) : (
                           <>
-                            Envoyer le message
+                            Demander un rendez-vous
                             <ArrowIcon />
                           </>
                         )}
@@ -335,10 +351,10 @@ export default function ContactPageContent() {
                   <div>
                     <h3 className="font-semibold text-white mb-1">Urgence dentaire ?</h3>
                     <p className="text-white/60 text-sm mb-3">
-                      En cas de douleur aiguë, nous vous recevons en priorité.
+                      En cas de douleur aiguë, je vous reçois en priorité.
                     </p>
                     <a
-                      href="tel:+33478XXXXXX"
+                      href="tel:+33478123456"
                       className="inline-flex items-center gap-2 text-accent text-sm font-medium hover:underline"
                     >
                       Appelez immédiatement
@@ -363,7 +379,7 @@ export default function ContactPageContent() {
             {/* Section Header */}
             <div className="mb-8">
               <h2 className="text-2xl lg:text-3xl font-semibold text-foreground mb-2">
-                Nous trouver
+                Localisation du cabinet
               </h2>
               <p className="text-gray">
                 Cabinet accessible aux personnes à mobilité réduite
@@ -532,15 +548,18 @@ function SuccessMessage({ onReset }: { onReset: () => void }) {
       >
         <CheckIcon className="w-8 h-8 text-green-600" />
       </motion.div>
-      <h3 className="text-2xl font-semibold text-foreground mb-2">Message envoyé !</h3>
-      <p className="text-gray mb-6">
-        Nous vous répondrons dans les plus brefs délais.
+      <h3 className="text-2xl font-semibold text-foreground mb-2">Demande envoyée !</h3>
+      <p className="text-gray mb-2">
+        Votre demande de rendez-vous a bien été reçue.
+      </p>
+      <p className="text-gray text-sm mb-6">
+        Je vous recontacterai sous 24h pour confirmer le créneau.
       </p>
       <button
         onClick={onReset}
         className="text-accent font-medium hover:underline"
       >
-        Envoyer un autre message
+        Faire une autre demande
       </button>
     </motion.div>
   )
