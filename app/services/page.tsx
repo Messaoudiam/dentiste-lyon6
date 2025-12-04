@@ -958,20 +958,20 @@ function ServiceSectionUrgence() {
               }}
             >
               <h4 className="text-white font-medium mb-3">
-                Horaires d'urgence
+                Horaires du cabinet
               </h4>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-white/60">Lundi - Vendredi</span>
-                  <span className="text-white">8h00 - 20h00</span>
+                  <span className="text-white">9h00 - 19h00</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-white/60">Samedi</span>
-                  <span className="text-white">9h00 - 18h00</span>
+                  <span className="text-white">9h00 - 12h00</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-white/60">Dimanche</span>
-                  <span className="text-white">Sur appel</span>
+                  <span className="text-white">Fermé</span>
                 </div>
               </div>
             </motion.div>
