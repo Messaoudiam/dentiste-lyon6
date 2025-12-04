@@ -545,7 +545,7 @@ function ServiceSectionEsthetique() {
               variant="primary"
               size="lg"
               href="/contact"
-              className="bg-white text-foreground hover:bg-white/90"
+              className="!bg-white !text-[#0A0A0A] hover:!bg-white/90"
             >
               Consultation esthétique
               <ArrowRight className="w-4 h-4" />
@@ -591,13 +591,13 @@ function ServiceSectionOrthodontie() {
               </div>
               <div className="relative aspect-square rounded-2xl overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1581585095561-c7c2f50f9a5a?w=600&q=80"
+                  src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&q=80"
                   alt="Après traitement orthodontie"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 50vw, 25vw"
                 />
-                <div className="absolute bottom-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">
+                <div className="absolute bottom-4 left-4 bg-[#0066FF] text-white px-3 py-1 rounded-full text-sm font-medium">
                   Après
                 </div>
               </div>
