@@ -182,10 +182,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+33478XXXXXX"
+                  href="tel:+33478123456"
                   className="text-white/50 text-sm hover:text-white transition-colors duration-300 block"
                 >
-                  04 78 XX XX XX
+                  04 78 12 34 56
                 </a>
               </li>
               <li>
@@ -238,7 +238,7 @@ export default function Footer() {
               </Link>
               <span className="text-white/10 hidden lg:inline">|</span>
               <Link
-                href="/accessibilite"
+                href="/mentions-legales#accessibilite"
                 className="text-white/30 text-xs hover:text-white/60 transition-colors duration-300 hidden lg:inline"
               >
                 Accessibilité

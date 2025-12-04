@@ -12,7 +12,7 @@ const faqs = [
   {
     question: 'Comment prendre rendez-vous ?',
     answer:
-      'Vous pouvez prendre rendez-vous en ligne 24h/24 via notre site, par téléphone au 04 78 XX XX XX, ou directement au cabinet. Nous vous confirmons votre créneau par SMS.',
+      'Vous pouvez prendre rendez-vous en ligne 24h/24 via le site, par téléphone au 04 78 12 34 56, ou directement au cabinet. Je vous confirme votre créneau par SMS.',
   },
   {
     question: 'Quels modes de paiement acceptez-vous ?',

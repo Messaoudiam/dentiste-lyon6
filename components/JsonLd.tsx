@@ -12,7 +12,7 @@ export default function JsonLd() {
     description:
       'Cabinet dentaire à Lyon 6ème. Le Dr. Martin propose des soins dentaires de qualité : implants, esthétique dentaire, orthodontie, soins conservateurs et urgences dentaires.',
     url: siteUrl,
-    telephone: '+33478XXXXXX',
+    telephone: '+33478123456',
     email: 'contact@dr-martin-dentiste.fr',
     address: {
       '@type': 'PostalAddress',
@@ -163,7 +163,7 @@ export default function JsonLd() {
     logo: `${siteUrl}/logo.png`,
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+33478XXXXXX',
+      telephone: '+33478123456',
       contactType: 'customer service',
       availableLanguage: ['French'],
       areaServed: 'FR',

@@ -862,7 +862,7 @@ function ServiceSectionUrgence() {
 
             {/* Phone number */}
             <a
-              href="tel:+33478XXXXXX"
+              href="tel:+33478123456"
               className="inline-flex items-center gap-4 bg-white/10 hover:bg-white/20 transition-colors rounded-xl p-6 mb-8"
             >
               <div className="w-14 h-14 rounded-full bg-accent flex items-center justify-center">
@@ -881,9 +881,9 @@ function ServiceSectionUrgence() {
                 </svg>
               </div>
               <div>
-                <p className="text-white/60 text-sm">Appelez-nous</p>
+                <p className="text-white/60 text-sm">Appelez-moi</p>
                 <p className="text-white text-2xl font-semibold">
-                  04 78 XX XX XX
+                  04 78 12 34 56
                 </p>
               </div>
             </a>

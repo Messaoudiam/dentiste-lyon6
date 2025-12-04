@@ -20,7 +20,7 @@ const testimonials = [
     id: 2,
     name: 'Thomas Durant',
     role: 'Patient depuis 2021',
-    text: "Implant réalisé avec une précision remarquable. Aucune douleur et un résultat parfait. Le Dr. Sophie Martin est très professionnelle et son cabinet est équipé des dernières technologies. Je recommande vivement !",
+    text: "Implant réalisé avec beaucoup de professionnalisme. Le Dr. Sophie Martin a pris le temps de bien m'expliquer chaque étape. Son cabinet est équipé des dernières technologies. Je recommande vivement !",
     rating: 5,
     initials: 'TD',
   },
@@ -125,7 +125,7 @@ export default function Testimonials() {
         {/* Header */}
         <SectionReveal direction="up" className="mb-16 lg:mb-24">
           <h2 className="heading-display">Témoignages</h2>
-          <p className="text-gray mt-2">La confiance de nos patients</p>
+          <p className="text-gray mt-2">La confiance de mes patients</p>
           <AnimatedGradientLine
             className="mt-6 max-w-xs"
             delay={0.3}

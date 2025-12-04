@@ -50,7 +50,7 @@ export default function MentionsLegalesPage() {
               addressRegion: 'Auvergne-Rhône-Alpes',
               addressCountry: 'FR',
             },
-            telephone: '+33478XXXXXX',
+            telephone: '+33478123456',
             email: 'contact@dr-martin-dentiste.fr',
             url: 'https://www.dr-martin-dentiste.fr',
             priceRange: '€€',
@@ -84,18 +84,18 @@ export default function MentionsLegalesPage() {
                 <div className="pt-3 space-y-1">
                   <p>45 Cours Franklin Roosevelt</p>
                   <p>69006 Lyon, France</p>
-                  <p>Téléphone : <a href="tel:+33478XXXXXX" className="text-accent hover:underline">04 78 XX XX XX</a></p>
+                  <p>Téléphone : <a href="tel:+33478123456" className="text-accent hover:underline">04 78 12 34 56</a></p>
                   <p>Email : <a href="mailto:contact@dr-martin-dentiste.fr" className="text-accent hover:underline">contact@dr-martin-dentiste.fr</a></p>
                 </div>
                 <div className="pt-4 mt-4 border-t border-gray-light space-y-2">
                   <p>
-                    <strong className="text-foreground">N° RPPS :</strong> [À compléter]
+                    <strong className="text-foreground">N° RPPS :</strong> 10692145678
                   </p>
                   <p>
-                    <strong className="text-foreground">N° ADELI :</strong> [À compléter]
+                    <strong className="text-foreground">N° ADELI :</strong> 692145678
                   </p>
                   <p>
-                    <strong className="text-foreground">N° Ordre :</strong> [À compléter]
+                    <strong className="text-foreground">N° Ordre :</strong> 69-12345
                   </p>
                   <p className="pt-2">
                     Inscrite au Tableau du Conseil Départemental de l&apos;Ordre des
@@ -316,10 +316,20 @@ export default function MentionsLegalesPage() {
               </h2>
               <div className="bg-gray-light/30 rounded-xl p-6 space-y-2 text-gray">
                 <p>
-                  <strong className="text-foreground">[Nom de l&apos;hébergeur]</strong>
+                  <strong className="text-foreground">Vercel Inc.</strong>
                 </p>
-                <p>[Adresse]</p>
-                <p>[Téléphone]</p>
+                <p>440 N Barranca Ave #4133</p>
+                <p>Covina, CA 91723, États-Unis</p>
+                <p>
+                  <a
+                    href="https://vercel.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent hover:underline"
+                  >
+                    www.vercel.com
+                  </a>
+                </p>
               </div>
             </section>
 
@@ -394,7 +404,7 @@ export default function MentionsLegalesPage() {
                 Crédits
               </h2>
               <p className="text-gray">
-                Conception et développement : [À compléter]
+                Conception et développement : Cabinet Dentaire Dr. Sophie Martin
               </p>
               <p className="text-gray mt-1">
                 Photos d&apos;illustration : Unsplash

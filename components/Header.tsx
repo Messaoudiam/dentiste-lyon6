@@ -304,10 +304,10 @@ export default function Header() {
                   {/* Contact info */}
                   <div className="mt-6 space-y-1 text-center">
                     <a
-                      href="tel:+33478XXXXXX"
+                      href="tel:+33478123456"
                       className="block text-sm text-gray hover:text-accent transition-colors"
                     >
-                      04 78 XX XX XX
+                      04 78 12 34 56
                     </a>
                     <p className="text-xs text-gray/60">Lun-Ven : 9h-19h</p>
                   </div>

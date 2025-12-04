@@ -116,8 +116,8 @@ export default function ConfidentialitePage() {
                   <br />
                   <span className="text-sm">Chirurgien-Dentiste - Docteur en chirurgie dentaire</span>
                 </p>
-                <p>N° RPPS : [Numéro RPPS]</p>
-                <p>N° ADELI : [Numéro ADELI]</p>
+                <p>N° RPPS : 10692145678</p>
+                <p>N° ADELI : 692145678</p>
                 <p className="pt-2 border-t border-gray-light mt-2">
                   <strong>Adresse du cabinet :</strong>
                   <br />
