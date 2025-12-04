@@ -311,9 +311,9 @@ export default function ArticlePageContent({ slug }: ArticlePageContentProps) {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
-                className="inline-flex items-center gap-2 bg-primary text-white text-sm font-medium px-4 py-2 rounded-full mb-5 shadow-lg shadow-primary/25"
+                className="inline-flex items-center gap-2 bg-white/90 dark:bg-dark/90 backdrop-blur-sm text-foreground text-sm font-medium px-4 py-2 rounded-full mb-5 shadow-lg"
               >
-                <Tag className="w-4 h-4" />
+                <Tag className="w-4 h-4 text-primary" />
                 {article.category}
               </motion.span>
 
@@ -336,15 +336,9 @@ export default function ArticlePageContent({ slug }: ArticlePageContentProps) {
           className="bg-white/70 dark:bg-dark/70 backdrop-blur-2xl rounded-3xl p-6 md:p-8 shadow-xl shadow-black/5 border border-white/50 dark:border-dark-gray/30 mb-14"
         >
           <div className="flex flex-wrap items-center justify-between gap-6">
-            <div className="flex items-center gap-4">
-              {/* Avatar auteur avec gradient */}
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary via-primary to-primary-dark flex items-center justify-center text-white font-semibold text-lg shadow-lg shadow-primary/30">
-                SM
-              </div>
-              <div>
-                <p className="font-semibold text-foreground">{article.author}</p>
-                <p className="text-sm text-gray">Chirurgien-dentiste à Lyon 6ème</p>
-              </div>
+            <div>
+              <p className="font-semibold text-foreground">{article.author}</p>
+              <p className="text-sm text-gray">Chirurgien-dentiste à Lyon 6ème</p>
             </div>
 
             <div className="flex items-center gap-6 text-sm">
@@ -426,29 +420,22 @@ export default function ArticlePageContent({ slug }: ArticlePageContentProps) {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-16 relative overflow-hidden rounded-[2rem]"
+          className="mt-16 bg-[#0066FF] rounded-[2rem] p-10 md:p-14 text-center"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary-dark" />
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2" />
-          </div>
-          <div className="relative p-10 md:p-14 text-center text-white">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-5">
-              Besoin d&apos;un conseil personnalisé ?
-            </h2>
-            <p className="text-white/80 mb-10 max-w-lg mx-auto text-lg">
-              Je vous accueille dans mon cabinet au 45 Cours Franklin Roosevelt,
-              Lyon 6ème, pour répondre à toutes vos questions.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-3 bg-white text-primary px-10 py-5 rounded-2xl font-semibold hover:bg-white/95 transition-all duration-300 hover:scale-105 shadow-2xl shadow-black/20 group"
-            >
-              Prendre rendez-vous
-              <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
+          <h2 className="text-2xl md:text-3xl font-semibold mb-5 text-white">
+            Besoin d&apos;un conseil personnalisé ?
+          </h2>
+          <p className="text-white/80 mb-10 max-w-lg mx-auto text-lg">
+            Je vous accueille dans mon cabinet au 45 Cours Franklin Roosevelt,
+            Lyon 6ème, pour répondre à toutes vos questions.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-3 bg-white text-[#0066FF] px-8 py-4 rounded-2xl font-semibold hover:bg-white/95 transition-all duration-300 hover:scale-105 shadow-xl group"
+          >
+            Prendre rendez-vous
+            <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </motion.div>
       </article>
 
