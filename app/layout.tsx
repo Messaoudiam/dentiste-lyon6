@@ -90,9 +90,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteUrl,
   },
-  verification: {
-    google: 'GOOGLE_SITE_VERIFICATION_CODE',
-  },
   category: 'health',
 }
 
