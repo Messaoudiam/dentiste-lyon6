@@ -26,7 +26,9 @@ main {
   --color-gray-light: #E5E5E5;
   --color-gray-dark: #1A1A1A;
 
-  /* Accent - Saturated Modern Blue */
+  /* Primary / Accent - Saturated Modern Blue */
+  --color-primary: #0066FF;
+  --color-primary-dark: #0052CC;
   --color-accent: #0066FF;
   --color-accent-hover: #0052CC;
   --color-accent-soft: rgb(0 102 255 / 0.08);

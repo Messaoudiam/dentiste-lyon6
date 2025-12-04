@@ -27,17 +27,17 @@ export default function MagneticButton({
 }: MagneticButtonProps) {
   const variants = {
     primary: cn(
-      'bg-accent text-white',
-      'hover:bg-accent/85'
+      'bg-[#0066FF] text-white',
+      'hover:bg-[#0052CC]'
     ),
     secondary: cn(
-      'bg-transparent text-foreground',
-      'border border-gray-light',
-      'hover:border-foreground hover:bg-foreground/5'
+      'bg-white text-[#0A0A0A]',
+      'border border-[#E5E5E5]',
+      'hover:border-[#0A0A0A] hover:bg-[#FAFAFA]'
     ),
     ghost: cn(
-      'bg-transparent text-gray',
-      'hover:text-foreground'
+      'bg-transparent text-[#6B6B6B]',
+      'hover:text-[#0A0A0A]'
     ),
   }
 
