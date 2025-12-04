@@ -218,7 +218,15 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
             {/* Copyright */}
             <p className="text-white/30 text-xs order-2 sm:order-1">
-              © {new Date().getFullYear()} Dr. Martin
+              © {new Date().getFullYear()} Dr. Martin · Site réalisé par{' '}
+              <a
+                href="https://forge-agency.fr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#0066FF] hover:text-[#3385FF] transition-colors"
+              >
+                Forge Agency
+              </a>
             </p>
 
             {/* Legal Links - Simplified on mobile */}
