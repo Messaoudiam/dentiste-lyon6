@@ -1,7 +1,7 @@
 {
   "name": "Cabinet Dentaire Dr. Sophie Martin Lyon",
-  "short_name": "Dr. Sophie Martin",
-  "description": "Cabinet dentaire à Lyon 6ème - Chirurgien-dentiste Dr. Sophie Martin - Implants, esthétique, orthodontie",
+  "short_name": "Dr. Martin",
+  "description": "Cabinet dentaire à Lyon 6ème - Chirurgien-dentiste Dr. Sophie Martin",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FAFAFA",
@@ -12,48 +12,9 @@
   "categories": ["health", "medical"],
   "icons": [
     {
-      "src": "/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
     }
-  ],
-  "screenshots": [
-    {
-      "src": "/screenshot-wide.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/screenshot-narrow.png",
-      "sizes": "720x1280",
-      "type": "image/png",
-      "form_factor": "narrow"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "Prendre rendez-vous",
-      "short_name": "RDV",
-      "description": "Prenez rendez-vous en ligne",
-      "url": "/contact",
-      "icons": [{ "src": "/icon-96.png", "sizes": "96x96" }]
-    },
-    {
-      "name": "Mes services",
-      "short_name": "Services",
-      "description": "Découvrez mes soins dentaires",
-      "url": "/services",
-      "icons": [{ "src": "/icon-96.png", "sizes": "96x96" }]
-    }
-  ],
-  "related_applications": [],
-  "prefer_related_applications": false
+  ]
 }
