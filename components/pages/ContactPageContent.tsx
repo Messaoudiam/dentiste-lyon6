@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 import { cn } from '@/lib/utils'
 
 const easeOutExpo: [number, number, number, number] = [0.16, 1, 0.3, 1]
@@ -90,12 +91,31 @@ export default function ContactPageContent() {
     setIsSubmitting(true)
     setError(null)
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      // Préparer les données pour EmailJS
+      const templateParams = {
+        from_name: `${formData.firstName} ${formData.lastName}`,
+        from_email: formData.email,
+        phone: formData.phone || 'Non renseigné',
+        service: formData.service || 'Non précisé',
+        message: formData.message || 'Demande de rendez-vous',
+      }
 
-    // Simulate success
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+      // Envoyer l'email via EmailJS
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      )
+
+      setIsSubmitted(true)
+    } catch (err) {
+      console.error('Erreur EmailJS:', err)
+      setError('Une erreur est survenue. Veuillez réessayer ou nous contacter par téléphone.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const resetForm = () => {
